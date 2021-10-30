@@ -2,10 +2,16 @@
 import './App.css';
 
 import user from './data/user.json';
-import Profile from './components/Profile';
+import Profile from './components/Profile/Profile';
 
 import statisticalData from './data/statistical-data.json';
 import Statistics from './components/Statistic/Statistics';
+
+import friends from './data/friends.json';
+import FriendList from './components/FriendList/FriendList';
+
+import transactions from './data/transactions.json';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 
 function App() {
   return (
@@ -23,6 +29,15 @@ function App() {
         <Statistics
           stats={statisticalData}
         />
+      </div>
+      <div>
+        <FriendList friends={friends} />
+      </div>
+      <div>
+        <TransactionHistory
+          items={transactions}
+        />
+        ;
       </div>
     </div>
   );
